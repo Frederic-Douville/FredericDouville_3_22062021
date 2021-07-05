@@ -1,4 +1,4 @@
-/*@import "./utils/variables";
+@import "./utils/variables";
 @import "./utils/functions";
 @import "./utils/mixins";
 @import "./utils/extensions";
@@ -13,6 +13,9 @@
 @import "./layout/container";
 @import "./layout/footer";
 
-
+/*
 @import "./pages/..";
 */
+h1{
+    color:red;
+}

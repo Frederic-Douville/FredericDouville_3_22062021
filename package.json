@@ -1,0 +1,19 @@
+{
+  "name": "oh-my-food",
+  "version": "1.0.0",
+  "description": "Projet 3 OPC",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/main.scss:./public/css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Frederic-Douville/FredericDouville_3_22062021.git"
+  },
+  "author": "Frederic Douville",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Frederic-Douville/FredericDouville_3_22062021/issues"
+  },
+  "homepage": "https://github.com/Frederic-Douville/FredericDouville_3_22062021#readme"
+}
