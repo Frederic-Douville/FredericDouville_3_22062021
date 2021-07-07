@@ -16,6 +16,23 @@
 /*
 @import "./pages/..";
 */
-h1{
-    color:red;
+body{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+a{
+    text-decoration: none;
+}
+
+img{
+    height:100px;
+    width:100px;
+}
+
+.svg-inline--fa{
+    width: 30px;
+    height: 30px;
 }

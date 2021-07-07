@@ -1,8 +1,89 @@
+@font-face {
+  font-family: "Roboto_light";
+  src: url(../../public/font/Roboto-Light.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Roboto_bold";
+  src: url(../../public/font/Roboto-Bold.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Roboto_medium";
+  src: url(../../public/font/Roboto-Medium.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Shrikhand";
+  src: url(../../public/font/Shrikhand-Regular.ttf) format("truetype");
+}
+p, li {
+  font-family: "Roboto_light";
+}
+
+h1, h2, h3, .choice_price p, .intro_container_location p {
+  font-family: "Roboto_bold";
+}
+
+button, .footer_element_bold {
+  font-family: "Roboto_medium";
+}
+
+.footer_title, .menu_title_h1 h1 {
+  font-family: "Shrikhand";
+}
+
+footer a, .footer_title, .intro_container_button button {
+  color: white;
+}
+
+.card_container_description_title {
+  color: black;
+}
+
+header img {
+  height: auto;
+  width: auto;
+}
+
+.intro_container {
+  background-color: #eaeaea;
+}
+.intro_container_location {
+  background-color: #dedede;
+}
+
+.restaurant_container {
+  background-color: #eaeaea;
+}
+
+footer {
+  background-color: #2d2d2d;
+  width: 50%;
+}
+footer ul {
+  list-style: none;
+}
+
 /*
 @import "./pages/..";
 */
-h1 {
-  color: red;
+body {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  height: 100px;
+  width: 100px;
+}
+
+.svg-inline--fa {
+  width: 30px;
+  height: 30px;
 }
 
 /*# sourceMappingURL=style.css.map */
