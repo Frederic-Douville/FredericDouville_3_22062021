@@ -1,0 +1,40 @@
+.working_container{
+    margin:2rem 0 2rem 0;
+    & h1{
+        margin:1rem 0 1rem 1rem;
+    }
+    &_button{
+        @include column;;
+        align-items:center;
+        &_secondary{
+            @include row;
+            justify-content: center;
+            & p{
+                padding: 0.25rem 0.5rem 0.25rem 0.5rem;
+                background-color: $color-1;
+                border-radius: 50% 50% 50% 50%;
+                margin:0 0 0 -1rem
+            }            
+            & svg {
+                margin: 0 1rem 0 1rem;  
+                fill:$grey-1;                                            
+            }
+            & button{
+                @include border_button;
+                margin: 0.5rem 0 0.5rem 0;
+                @include row;
+                align-items: center;
+                justify-content: flex-start;
+                width:18rem;
+                height:4rem;
+                &:hover{
+                    box-shadow: 0.1em 0.1em 0.2em black;
+                    background-color: $grey-2;
+                    .svg-inline--fa{
+                        fill:$color-1;
+                    }
+                }
+            }
+        }       
+    }
+}

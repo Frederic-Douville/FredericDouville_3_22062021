@@ -1,0 +1,15 @@
+@mixin row{
+    display: flex;
+    flex-direction: row;
+}
+
+@mixin column{
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin border_button{
+    border-style: none;
+    border-radius: 1.5rem 1.5rem 1.5rem 1.5rem;
+    box-shadow: 0.1em 0.1em 0.2em grey;
+}

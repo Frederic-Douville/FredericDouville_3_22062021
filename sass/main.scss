@@ -9,6 +9,9 @@
 @import "./components/buttons";
 
 @import "./layout/header";
+@import "./layout/intro";
+@import "./layout/working";
+@import "./layout/restaurant";
 @import "./layout/nav";
 @import "./layout/container";
 @import "./layout/footer";
@@ -16,10 +19,10 @@
 /*
 @import "./pages/..";
 */
-body{
+.bloc_page{
+    max-width: 1000px;
     width: 100%;
-    display: flex;
-    flex-direction: column;
+    @include column;
     align-items: center;
 }
 
@@ -33,6 +36,6 @@ img{
 }
 
 .svg-inline--fa{
-    width: 30px;
-    height: 30px;
+    width: 1rem;
+    height: 1rem;
 }

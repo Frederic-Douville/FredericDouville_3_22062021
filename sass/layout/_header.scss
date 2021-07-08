@@ -1,4 +1,22 @@
 header img{
+    width: 10rem;
     height:auto;
-    width: auto;
+    }
+   
+
+.header_container{
+    @include row;
+    justify-content:space-between ;    
+    width: 100%;
+    &_arrow{
+        @include row;
+        justify-content: center;
+        align-items: center;        
+    }
+    &_logo{
+        
+    }
+    &_empty{
+        
+    }
 }

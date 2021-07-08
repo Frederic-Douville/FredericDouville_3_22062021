@@ -22,11 +22,11 @@ p,li{
     font-family: 'Roboto_light';
 }
 
-h1,h2,h3,.choice_price p,.intro_container_location p{
+h1,h2,h3,.choice_price p,.intro_container_location p,.intro_container_description span{
     font-family: 'Roboto_bold';
 }
 
-button,.footer_element_bold{
+button,.footer_element_bold,.working_container p{
     font-family: 'Roboto_medium';
 }
 
@@ -34,7 +34,7 @@ button,.footer_element_bold{
     font-family: 'Shrikhand';
 }
 
-footer a,.footer_title,.intro_container_button button{
+footer a,.footer_title,.intro_container_button button,.working_container p{
     color:white
 }
 

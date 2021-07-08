@@ -1,7 +1,21 @@
-footer{
+.footer{    
     background-color:$grey-1;
-    width: 50%;
+    width: 100%;
     & ul{
     list-style: none;
     }
+    &_title{
+        margin:1rem 0 1rem 0;
+    }
+    &_element{
+        margin:0.5rem 0 0.5rem 0;
+        &_bold a{
+            @include row;
+            align-items: center;
+            & svg{
+                padding: 0 0.5rem 0 0;
+            }
+        }
+    }
+    
 }

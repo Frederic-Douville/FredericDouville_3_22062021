@@ -1,0 +1,46 @@
+.intro_container{
+    background-color: $grey-3;
+    &_location{
+        background-color: $grey-2;
+        @include row;
+        justify-content: center;
+        & p{
+            margin:0.5rem 0 0.5rem 0;
+        }
+        & svg{
+            margin:0 0.5rem 0 0.5rem;
+        }
+    
+    }
+    &_description{
+        @include column;
+        align-items: center; 
+        margin: 1rem 0 1rem 0;  
+        & h1{
+            display: inline;
+            margin:0.25rem 1rem 0.25rem 1rem;
+            text-align: center;                       
+        }
+        & p{
+            margin:0.25rem 1rem 0.25rem 1rem;
+            text-align: center;
+        }
+    }
+    &_button{
+        @include row;
+        justify-content: center;
+        & button{
+            cursor: pointer;
+            @include border_button;
+            background: linear-gradient($color-2, $color-1);
+            width: 14rem;
+            height:3rem;
+            font-size: 1rem;
+            margin:1rem 0 2rem 0;
+            &:hover{
+                box-shadow: 0.1em 0.1em 0.2em black;
+            }
+        }
+        
+    }
+}
