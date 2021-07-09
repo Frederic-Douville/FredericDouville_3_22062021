@@ -1,12 +1,11 @@
 .restaurant_container{
-    @include column;
+    @include flex_dlc(column,none,none);
     background-color: $grey-3;
     &_title h1{
         margin:3rem 0 1rem 1rem;
     }
     &_card{
-        @include column;
-        align-items: center;
+        @include flex_dlc(column,center,space-around);        
         margin:0 0 3rem 0;
         & a:hover{
             .card_container{
@@ -17,11 +16,12 @@
 }
 
 .card_container{
-    @include column;
+    @include flex_dlc(column,none,none);
     @include border_button;
     background-color: white;
     margin:1rem 0 1rem 0;
-    &_img{
+    z-index: 1;
+    &_img{        
         & img{
             object-fit: cover;
             width: 18rem;
@@ -30,9 +30,7 @@
         }
     }
     &_description{
-        @include row;
-        align-items: center;
-        justify-content: space-between;
+        @include flex_dlc(row,center,space-between);
         margin: 0.5rem 1rem 1rem 1rem ;
         &_title{
             margin:none;
@@ -56,3 +54,17 @@
     }    
 }
 
+.new{
+    background-color: green;    
+    position: absolute;
+    z-index: 2;   
+    width:4.5rem;
+    height: 1.5rem;
+    border-radius: .25rem  .25rem  .25rem  .25rem;
+    margin:1rem 1rem 0 12rem ;
+    
+    & p{
+        @include flex_dlc(column,flex-start,center);
+        margin:.2rem .2rem .2rem .2rem;      
+    }    
+}

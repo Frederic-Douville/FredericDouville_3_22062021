@@ -13,8 +13,7 @@
     
     }
     &_description{
-        @include column;
-        align-items: center; 
+        @include flex_dlc(column,center,none);
         margin: 1rem 0 1rem 0;  
         & h1{
             display: inline;
@@ -27,8 +26,7 @@
         }
     }
     &_button{
-        @include row;
-        justify-content: center;
+        @include flex_dlc(row,none,center);        
         & button{
             cursor: pointer;
             @include border_button;

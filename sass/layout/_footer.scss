@@ -10,8 +10,7 @@
     &_element{
         margin:0.5rem 0 0.5rem 0;
         &_bold a{
-            @include row;
-            align-items: center;
+            @include flex_dlc(row,center,flex-start);            
             & svg{
                 padding: 0 0.5rem 0 0;
             }

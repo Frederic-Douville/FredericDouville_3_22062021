@@ -1,20 +1,21 @@
-header img{
+header{ 
+    width:100%;
+    @include flex_dlc(row,center,center); 
+    margin: 1rem 0 1rem 0;
+& img{
     width: 10rem;
     height:auto;
     }
-   
+}  
 
 .header_container{
-    @include row;
-    justify-content:space-between ;    
+    @include flex_dlc(row,center,space-between);       
     width: 100%;
     &_arrow{
-        @include row;
-        justify-content: center;
-        align-items: center;        
+        @include flex_dlc(row,center,center);              
     }
-    &_logo{
-        
+    &_logo svg{
+        fill:$grey-1;
     }
     &_empty{
         

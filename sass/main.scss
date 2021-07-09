@@ -12,6 +12,7 @@
 @import "./layout/intro";
 @import "./layout/working";
 @import "./layout/restaurant";
+@import "./layout/menu";
 @import "./layout/nav";
 @import "./layout/container";
 @import "./layout/footer";
@@ -20,10 +21,13 @@
 @import "./pages/..";
 */
 .bloc_page{
-    max-width: 1000px;
-    width: 100%;
-    @include column;
-    align-items: center;
+    max-width: 1000px;    
+    @include flex_dlc(column,center,space-around);    
+    margin:auto;
+}
+
+main{
+    width:100%;
 }
 
 a{
