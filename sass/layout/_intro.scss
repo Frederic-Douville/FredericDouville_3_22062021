@@ -1,9 +1,9 @@
 .intro_container{
     background-color: $grey-3;
+    width: 100%;
     &_location{
         background-color: $grey-2;
-        @include row;
-        justify-content: center;
+        @include flex_dlc(row,center,center);        
         & p{
             margin:0.5rem 0 0.5rem 0;
         }
@@ -26,17 +26,18 @@
         }
     }
     &_button{
-        @include flex_dlc(row,none,center);        
+        @include flex_dlc(row,center,center); 
+        width:100%;       
         & button{
             cursor: pointer;
             @include border_button;
             background: linear-gradient($color-2, $color-1);
-            width: 14rem;
+            width:100%;
             height:3rem;
             font-size: 1rem;
             margin:1rem 0 2rem 0;
             &:hover{
-                box-shadow: 0.1em 0.1em 0.2em black;
+                box-shadow: 0.1em 0.1em 0.2em $grey-1;
             }
         }
         

@@ -34,10 +34,14 @@ button,.footer_element_bold,.working_container p,.new p{
     font-family: 'Shrikhand';
 }
 
-footer a,.footer_title,.intro_container_button button,.working_container p,.new p{
+footer a,.footer_title,.intro_container_button button,.menu_button button,.working_container p,.new p{
     color:white
 }
 
 .card_container_description_title{
     color: black;
+}
+
+.new p{
+    color:green;
 }

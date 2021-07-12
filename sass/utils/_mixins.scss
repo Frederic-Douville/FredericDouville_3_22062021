@@ -1,13 +1,3 @@
-@mixin row{
-    display: flex;
-    flex-direction: row;
-}
-
-@mixin column{
-    display: flex;
-    flex-direction: column;
-}
-
 @mixin flex_dlc($direction,$line,$content){
     display:flex;
     flex-direction: $direction;

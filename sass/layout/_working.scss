@@ -1,13 +1,18 @@
 .working_container{
     margin:2rem 0 2rem 0;
+    
     & h1{
         margin:1rem 0 1rem 1rem;
     }
     &_button{
-        @include flex_dlc(column,center,center);       
+         
+            
         &_secondary{
+            @include flex_dlc(column,center,center);
+            width:100%;
             & p{
                 padding: 0.25rem 0.5rem 0.25rem 0.5rem;
+                
                 background-color: $color-1;
                 border-radius: 50% 50% 50% 50%;
                 margin:0 0 0 -1rem
@@ -19,8 +24,9 @@
             & button{
                 @include border_button;
                 @include flex_dlc(row,center,flex-start);
-                margin: 0.5rem 0 0.5rem 0;                
-                width:18rem;
+                margin: 0.5rem 0 0.5rem 0;
+                font-size: 1rem;                
+                width:80%;
                 height:4rem;                
                 &:hover{
                     box-shadow: 0.1em 0.1em 0.2em black;
