@@ -14,23 +14,40 @@
   font-family: "Shrikhand";
   src: url(../../public/font/Shrikhand-Regular.ttf) format("truetype");
 }
-p, li {
+p,
+li,
+.menu_container_title h2 {
   font-family: "Roboto_light";
 }
 
-h1, h2, h3, .choice_price p, .intro_container_location p, .intro_container_description span {
+h1,
+h2,
+h3,
+.choice_price p,
+.intro_container_location p,
+.intro_container_description span {
   font-family: "Roboto_bold";
 }
 
-button, .footer_element_bold, .working_container p, .new p {
+button,
+.footer_element_bold,
+.working_container span,
+.working_container p,
+.new p {
   font-family: "Roboto_medium";
 }
 
-.footer_title, .menu_title_h1 h1 {
+.footer_title,
+.menu_title_h1 h1 {
   font-family: "Shrikhand";
 }
 
-footer a, .footer_title, .intro_container_button button, .menu_button button, .working_container p, .new p {
+footer a,
+.footer_title,
+.intro_container_button button,
+.menu_button button,
+.working_container span,
+.new p {
   color: white;
 }
 
@@ -68,8 +85,21 @@ header img {
   align-items: center;
   justify-content: center;
 }
-.header_container_logo svg {
+.header_container_arrow svg {
   fill: #2d2d2d;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+@media screen and (min-width: 768px) {
+  header img {
+    width: 14rem;
+  }
+}
+@media screen and (min-width: 991px) {
+  header img {
+    width: 16rem;
+  }
 }
 .intro_container {
   background-color: #eaeaea;
@@ -83,10 +113,12 @@ header img {
   justify-content: center;
 }
 .intro_container_location p {
-  margin: 0.5rem 0 0.5rem 0;
+  margin: 1rem 0 1rem 0;
 }
 .intro_container_location svg {
   margin: 0 0.5rem 0 0.5rem;
+  width: 1.25rem;
+  height: 1.25rem;
 }
 .intro_container_description {
   display: flex;
@@ -110,6 +142,10 @@ header img {
   align-items: center;
   justify-content: center;
   width: 100%;
+}
+.intro_container_button a {
+  width: 50%;
+  max-width: 15rem;
 }
 .intro_container_button button {
   cursor: pointer;
@@ -139,17 +175,22 @@ header img {
   justify-content: center;
   width: 100%;
 }
-.working_container_button_secondary p {
+.working_container_button_secondary span {
   padding: 0.25rem 0.5rem 0.25rem 0.5rem;
   background-color: #9356dc;
   border-radius: 50% 50% 50% 50%;
   margin: 0 0 0 -1rem;
 }
 .working_container_button_secondary svg {
-  margin: 0 1rem 0 1rem;
+  margin: 0 0.5rem 0 1rem;
   fill: #2d2d2d;
+  width: 1.25rem;
+  height: 1.25rem;
 }
-.working_container_button_secondary button {
+.working_container_button_secondary p {
+  margin: 0 0.5rem 0 0.5rem;
+}
+.working_container_button_secondary .button {
   border-style: none;
   border-radius: 1.5rem 1.5rem 1.5rem 1.5rem;
   box-shadow: 0.1em 0.1em 0.2em grey;
@@ -157,19 +198,35 @@ header img {
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
+  background-color: #eaeaea;
   margin: 0.5rem 0 0.5rem 0;
   font-size: 1rem;
-  width: 80%;
+  width: 90%;
+  max-width: 18rem;
   height: 4rem;
 }
-.working_container_button_secondary button:hover {
-  box-shadow: 0.1em 0.1em 0.2em black;
+.working_container_button_secondary .button:hover {
+  box-shadow: 0.1em 0.1em 0.2em #2d2d2d;
   background-color: #dedede;
 }
-.working_container_button_secondary button:hover .svg-inline--fa {
+.working_container_button_secondary .button:hover .svg-inline--fa {
   fill: #9356dc;
 }
 
+@media screen and (min-width: 768px) {
+  .working_container_button {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .working_container_button_secondary {
+    width: 33%;
+  }
+  .working_container_button_secondary button {
+    width: 95%;
+  }
+}
 .restaurant_container {
   display: flex;
   flex-direction: column;
@@ -203,6 +260,7 @@ header img {
   background-color: white;
   margin: 1rem 10% 1rem 10%;
   width: 80%;
+  max-width: 30rem;
   z-index: 1;
 }
 .card_container_img {
@@ -276,6 +334,25 @@ header img {
   margin: 0.2rem 0.2rem 0.2rem 0.2rem;
 }
 
+@media screen and (min-width: 768px) {
+  .restaurant_container_card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    flex-wrap: wrap;
+  }
+  .restaurant_container_card a {
+    width: 50%;
+  }
+
+  .card_container {
+    width: 80%;
+    max-width: none;
+    height: auto;
+  }
+}
 .restaurant_container-2 {
   display: flex;
   flex-direction: column;
@@ -293,8 +370,10 @@ header img {
   flex-direction: column;
   align-items: flex-start;
   justify-content: space-around;
+  background-color: #eaeaea;
   width: 100%;
   margin: -3rem 0 0 0;
+  border-radius: 2rem 2rem 0 0;
 }
 
 .menu_title {
@@ -330,11 +409,20 @@ header img {
   opacity: 1;
 }
 
+.menu {
+  width: 100%;
+}
 .menu_container {
   width: 100%;
 }
 .menu_container_title h2 {
   margin: 1rem 1rem 1rem 1rem;
+}
+.menu_container_title_underline {
+  width: 3.5rem;
+  height: 0.25rem;
+  margin: -0.5rem 0 0 1rem;
+  background-color: #99e2d0;
 }
 .menu_container_choice {
   display: flex;
@@ -354,20 +442,22 @@ header img {
   box-shadow: 0.1em 0.1em 0.2em grey;
   background-color: white;
   width: 90%;
-  height: 8rem;
+  max-width: 25rem;
+  height: 5rem;
   margin: 1rem 0 1rem 0;
   cursor: pointer;
 }
 .choice_description {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
+  display: block;
   width: 70%;
   height: 5rem;
 }
-.choice_description h3, .choice_description p {
-  margin: 0.25rem 0.5rem 0.25rem 1rem;
+.choice_description h3,
+.choice_description p {
+  margin: 0.75rem 1rem 0.75rem 1.5rem;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 .choice_price {
   display: flex;
@@ -377,6 +467,10 @@ header img {
   width: 15%;
   height: 5rem;
 }
+.choice_price p {
+  margin: 0 0.5rem 0.75rem 0.5rem;
+  white-space: nowrap;
+}
 .choice_validation {
   display: flex;
   flex-direction: row;
@@ -384,7 +478,7 @@ header img {
   justify-content: center;
   background-color: #99e2d0;
   width: 15%;
-  height: 8rem;
+  height: 5rem;
   border-radius: 0 1.5rem 1.5rem 0;
 }
 .choice_validation svg {
@@ -410,6 +504,7 @@ header img {
   box-shadow: 0.1em 0.1em 0.2em grey;
   background: linear-gradient(#ff79da, #9356dc);
   width: 60%;
+  max-width: 15rem;
   height: 3rem;
   font-size: 1rem;
   margin: 1rem 0 1rem 0;
@@ -418,15 +513,62 @@ header img {
   box-shadow: 0.1em 0.1em 0.2em #2d2d2d;
 }
 
+@media screen and (min-width: 768px) {
+  .menu_title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .menu_title_h1 {
+    margin: 1rem 2rem 1rem 2rem;
+  }
+  .menu_title_h1 h1 {
+    font-size: 2rem;
+  }
+  .menu_title_heart {
+    margin: 1rem 2rem 1rem 2rem;
+  }
+
+  .menu {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+  .menu_container {
+    width: 33%;
+  }
+
+  .choice {
+    width: 95%;
+  }
+  .choice_description h3,
+.choice_description p {
+    margin: 1rem 1rem 1rem 1.5rem;
+  }
+  .choice_description h3 {
+    font-size: 0.9rem;
+  }
+  .choice_description p {
+    font-size: 0.7rem;
+  }
+}
 .footer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
   background-color: #2d2d2d;
   width: 100%;
 }
 .footer ul {
   list-style: none;
+  margin: 0 0 0 0;
 }
 .footer_title {
   margin: 1rem 0 1rem 0;
+  font-size: 1.5rem;
 }
 .footer_element {
   margin: 0.5rem 0 0.5rem 0;
@@ -437,15 +579,31 @@ header img {
   align-items: center;
   justify-content: flex-start;
 }
-.footer_element_bold a svg {
+.footer_element svg {
   padding: 0 0.5rem 0 0;
+  width: 1.25rem;
+  height: 1.25rem;
 }
 
+@media screen and (min-width: 768px) {
+  .footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .footer ul {
+    margin: 0 0 0 -3rem;
+  }
+  .footer_title {
+    font-size: 2.5rem;
+  }
+}
 /*
 @import "./pages/..";
 */
 .bloc_page {
-  max-width: 1000px;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -461,14 +619,15 @@ a {
   text-decoration: none;
 }
 
-img {
-  height: 100px;
-  width: 100px;
+@media screen and (min-width: 768px) {
+  .bloc_page {
+    width: 100%;
+  }
 }
-
-.svg-inline--fa {
-  width: 1rem;
-  height: 1rem;
+@media screen and (min-width: 991px) {
+  .bloc_page {
+    width: 80%;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

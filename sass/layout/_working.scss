@@ -1,41 +1,60 @@
-.working_container{
-    margin:2rem 0 2rem 0;
-    
-    & h1{
-        margin:1rem 0 1rem 1rem;
+.working_container {
+  margin: 2rem 0 2rem 0;
+
+  & h1 {
+    margin: 1rem 0 1rem 1rem;
+  }
+  &_button {
+    &_secondary {
+      @include flex_dlc(column, center, center);
+      width: 100%;
+      & span {
+        padding: 0.25rem 0.5rem 0.25rem 0.5rem;
+
+        background-color: $color-1;
+        border-radius: 50% 50% 50% 50%;
+        margin: 0 0 0 -1rem;
+      }
+      & svg {
+        margin: 0 0.5rem 0 1rem;
+        fill: $grey-1;
+        width: 1.25rem;
+        height: 1.25rem;
+      }
+      & p {
+        margin: 0 0.5rem 0 0.5rem;
+      }
+      & .button {
+        @include border_button;
+        @include flex_dlc(row, center, flex-start);
+        background-color: $grey-3;
+        margin: 0.5rem 0 0.5rem 0;
+        font-size: 1rem;
+        width: 90%;
+        max-width: 18rem;
+        height: 4rem;
+        &:hover {
+          box-shadow: 0.1em 0.1em 0.2em $grey-1;
+          background-color: $grey-2;
+          .svg-inline--fa {
+            fill: $color-1;
+          }
+        }
+      }
     }
-    &_button{
-         
-            
-        &_secondary{
-            @include flex_dlc(column,center,center);
-            width:100%;
-            & p{
-                padding: 0.25rem 0.5rem 0.25rem 0.5rem;
-                
-                background-color: $color-1;
-                border-radius: 50% 50% 50% 50%;
-                margin:0 0 0 -1rem
-            }            
-            & svg {
-                margin: 0 1rem 0 1rem;  
-                fill:$grey-1;                                            
-            }
-            & button{
-                @include border_button;
-                @include flex_dlc(row,center,flex-start);
-                margin: 0.5rem 0 0.5rem 0;
-                font-size: 1rem;                
-                width:80%;
-                height:4rem;                
-                &:hover{
-                    box-shadow: 0.1em 0.1em 0.2em black;
-                    background-color: $grey-2;
-                    .svg-inline--fa{
-                        fill:$color-1;
-                    }
-                }
-            }
-        }       
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .working_container {
+    &_button {
+      @include flex_dlc(row, center, space-between);
+      &_secondary {
+        width: 33%;
+        & button {
+          width: 95%;
+        }
+      }
     }
+  }
 }

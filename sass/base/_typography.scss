@@ -1,47 +1,64 @@
 @font-face {
-    font-family: 'Roboto_light';
-    src: url(../../public/font/Roboto-Light.ttf) format('truetype');
+  font-family: "Roboto_light";
+  src: url(../../public/font/Roboto-Light.ttf) format("truetype");
 }
 
 @font-face {
-    font-family: 'Roboto_bold';
-    src: url(../../public/font/Roboto-Bold.ttf) format('truetype');
+  font-family: "Roboto_bold";
+  src: url(../../public/font/Roboto-Bold.ttf) format("truetype");
 }
 
 @font-face {
-    font-family: 'Roboto_medium';
-    src: url(../../public/font/Roboto-Medium.ttf) format('truetype');
+  font-family: "Roboto_medium";
+  src: url(../../public/font/Roboto-Medium.ttf) format("truetype");
 }
 
 @font-face {
-    font-family: 'Shrikhand';
-    src: url(../../public/font/Shrikhand-Regular.ttf) format('truetype');
+  font-family: "Shrikhand";
+  src: url(../../public/font/Shrikhand-Regular.ttf) format("truetype");
 }
 
-p,li{
-    font-family: 'Roboto_light';
+p,
+li,
+.menu_container_title h2 {
+  font-family: "Roboto_light";
 }
 
-h1,h2,h3,.choice_price p,.intro_container_location p,.intro_container_description span{
-    font-family: 'Roboto_bold';
+h1,
+h2,
+h3,
+.choice_price p,
+.intro_container_location p,
+.intro_container_description span {
+  font-family: "Roboto_bold";
 }
 
-button,.footer_element_bold,.working_container p,.new p{
-    font-family: 'Roboto_medium';
+button,
+.footer_element_bold,
+.working_container span,
+.working_container p,
+.new p {
+  font-family: "Roboto_medium";
 }
 
-.footer_title,.menu_title_h1 h1{
-    font-family: 'Shrikhand';
+.footer_title,
+.menu_title_h1 h1 {
+  font-family: "Shrikhand";
 }
 
-footer a,.footer_title,.intro_container_button button,.menu_button button,.working_container p,.new p{
-    color:white
+footer a,
+.footer_title,
+.intro_container_button button,
+.menu_button button,
+.working_container span,
+.new p {
+  color: white;
 }
 
-.card_container_description_title{
-    color: black;
+.card_container_description_title {
+  color: black;
 }
 
-.new p{
-    color:green;
+.new p {
+  color: green;
 }

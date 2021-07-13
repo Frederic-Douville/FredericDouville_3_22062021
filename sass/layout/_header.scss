@@ -1,23 +1,33 @@
-header{ 
-    width:100%;
-    @include flex_dlc(row,center,center); 
-    margin: 1rem 0 1rem 0;
-& img{
+header {
+  width: 100%;
+  @include flex_dlc(row, center, center);
+  margin: 1rem 0 1rem 0;
+  & img {
     width: 10rem;
-    height:auto;
-    }
-}  
+    height: auto;
+  }
+}
 
-.header_container{
-    @include flex_dlc(row,center,space-between);       
-    width: 100%;
-    &_arrow{
-        @include flex_dlc(row,center,center);              
+.header_container {
+  @include flex_dlc(row, center, space-between);
+  width: 100%;
+  &_arrow {
+    @include flex_dlc(row, center, center);
+    & svg {
+      fill: $grey-1;
+      width: 1.5rem;
+      height: 1.5rem;
     }
-    &_logo svg{
-        fill:$grey-1;
-    }
-    &_empty{
-        
-    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  header img {
+    width: 14rem;
+  }
+}
+@media screen and (min-width: 991px) {
+  header img {
+    width: 16rem;
+  }
 }

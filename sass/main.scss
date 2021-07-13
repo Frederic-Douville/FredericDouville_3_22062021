@@ -20,26 +20,28 @@
 /*
 @import "./pages/..";
 */
-.bloc_page{
-    max-width: 1000px;    
-    @include flex_dlc(column,center,space-around);    
-    margin:auto;
+.bloc_page {
+  width: 100%;
+  @include flex_dlc(column, center, space-around);
+  margin: auto;
 }
 
-main{
-    width:100%;
+main {
+  width: 100%;
 }
 
-a{
-    text-decoration: none;
+a {
+  text-decoration: none;
 }
 
-img{
-    height:100px;
-    width:100px;
+@media screen and (min-width: 768px) {
+  .bloc_page {
+    width: 100%;
+  }
 }
 
-.svg-inline--fa{
-    width: 1rem;
-    height: 1rem;
+@media screen and (min-width: 991px) {
+  .bloc_page {
+    width: 80%;
+  }
 }
