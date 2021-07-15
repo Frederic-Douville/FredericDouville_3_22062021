@@ -159,7 +159,7 @@ header img {
   margin: 1rem 0 2rem 0;
 }
 .intro_container_button button:hover {
-  box-shadow: 0.1em 0.1em 0.2em #2d2d2d;
+  box-shadow: 0.1em 0.1em 0.2em black;
 }
 
 .working_container {
@@ -345,11 +345,15 @@ header img {
   }
   .restaurant_container_card a {
     width: 50%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
   }
 
   .card_container {
     width: 80%;
-    max-width: none;
+    max-width: 30rem;
     height: auto;
   }
 }
@@ -446,29 +450,30 @@ header img {
   height: 5rem;
   margin: 1rem 0 1rem 0;
   cursor: pointer;
+  overflow: hidden;
 }
 .choice_description {
   display: block;
-  width: 70%;
+  width: 80%;
   height: 5rem;
 }
 .choice_description h3,
 .choice_description p {
-  margin: 0.75rem 1rem 0.75rem 1.5rem;
+  margin: 0.75rem 1rem 0.5rem 1.5rem;
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
 }
 .choice_price {
   display: flex;
-  flex-direction: row;
-  align-items: flex-end;
-  justify-content: center;
-  width: 15%;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+  width: 20%;
   height: 5rem;
 }
 .choice_price p {
-  margin: 0 0.5rem 0.75rem 0.5rem;
+  margin: 0 2rem 1rem 0;
   white-space: nowrap;
 }
 .choice_validation {
@@ -477,19 +482,77 @@ header img {
   align-items: center;
   justify-content: center;
   background-color: #99e2d0;
-  width: 15%;
+  width: 0%;
   height: 5rem;
   border-radius: 0 1.5rem 1.5rem 0;
+  transform: translateX(100%);
+  transition: transform 500ms ease-in-out;
 }
 .choice_validation svg {
   fill: white;
   width: 1.5rem;
   height: 1.5rem;
+  transform: rotate(-360deg);
+  transition: transform 500ms ease-in-out;
 }
 .choice:hover {
   box-shadow: 0.1em 0.1em 0.2em #2d2d2d;
 }
+.choice:hover .choice_description {
+  width: 70%;
+  transition: width 500ms ease-in-out;
+}
+.choice:hover .choice_price {
+  width: 15%;
+  transition: width 500ms ease-in-out;
+}
+.choice:hover .choice_validation {
+  width: 15%;
+  transition: width 500ms ease-in-out;
+  transform: translateX(0%);
+}
+.choice:hover .choice_validation svg {
+  transform: rotate(0deg);
+}
+.choice--1 {
+  opacity: 1;
+  transform: translateY(0rem);
+  animation: menu-appearance 1000ms 100ms both;
+}
+.choice--2 {
+  opacity: 1;
+  transform: translateY(0rem);
+  animation: menu-appearance 1000ms 400ms both;
+}
+.choice--3 {
+  opacity: 1;
+  transform: translateY(0rem);
+  animation: menu-appearance 1000ms 700ms both;
+}
+.choice--4 {
+  opacity: 1;
+  transform: translateY(0rem);
+  animation: menu-appearance 1000ms 1000ms both;
+}
 
+@keyframes menu-appearance {
+  0% {
+    opacity: 0;
+    transform: translateY(1.2rem);
+  }
+  33% {
+    opacity: 0;
+    /*transform: translateY(0.8rem);*/
+  }
+  66% {
+    opacity: 0.5;
+    /*transform: translateY(0.4rem);*/
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0rem);
+  }
+}
 .menu_button {
   display: flex;
   flex-direction: row;
@@ -510,7 +573,7 @@ header img {
   margin: 1rem 0 1rem 0;
 }
 .menu_button button:hover {
-  box-shadow: 0.1em 0.1em 0.2em #2d2d2d;
+  box-shadow: 0.1em 0.1em 0.2em black;
 }
 
 @media screen and (min-width: 768px) {
@@ -542,16 +605,6 @@ header img {
 
   .choice {
     width: 95%;
-  }
-  .choice_description h3,
-.choice_description p {
-    margin: 1rem 1rem 1rem 1.5rem;
-  }
-  .choice_description h3 {
-    font-size: 0.9rem;
-  }
-  .choice_description p {
-    font-size: 0.7rem;
   }
 }
 .footer {
@@ -626,7 +679,7 @@ a {
 }
 @media screen and (min-width: 991px) {
   .bloc_page {
-    width: 80%;
+    width: 70%;
   }
 }
 

@@ -75,42 +75,104 @@
   height: 5rem;
   margin: 1rem 0 1rem 0;
   cursor: pointer;
+  overflow: hidden;
   &_description {
     display: block;
-    width: 70%;
+    width: 80%;
     height: 5rem;
-
     & h3,
     p {
-      margin: 0.75rem 1rem 0.75rem 1.5rem;
+      margin: 0.75rem 1rem 0.5rem 1.5rem;
       text-overflow: ellipsis;
       overflow: hidden;
       white-space: nowrap;
     }
   }
   &_price {
-    @include flex_dlc(row, flex-end, center);
-    width: 15%;
+    @include flex_dlc(column, flex-start, flex-end);
+    width: 20%;
     height: 5rem;
     & p {
-      margin: 0 0.5rem 0.75rem 0.5rem;
+      margin: 0 2rem 1rem 0;
       white-space: nowrap;
     }
   }
   &_validation {
     @include flex_dlc(row, center, center);
+
     background-color: $color-3;
-    width: 15%;
+    width: 0%;
     height: 5rem;
     border-radius: 0 1.5rem 1.5rem 0;
+    transform: translateX(100%);
+    transition: transform 500ms ease-in-out;
     & svg {
       fill: white;
       width: 1.5rem;
       height: 1.5rem;
+      transform: rotate(-360deg);
+      transition: transform 500ms ease-in-out;
     }
   }
   &:hover {
     box-shadow: 0.1em 0.1em 0.2em $grey-1;
+    & .choice {
+      &_description {
+        width: 70%;
+        transition: width 500ms ease-in-out;
+      }
+      &_price {
+        width: 15%;
+        transition: width 500ms ease-in-out;
+      }
+      &_validation {
+        width: 15%;
+        transition: width 500ms ease-in-out;
+        transform: translateX(0%);
+        & svg {
+          transform: rotate(0deg);
+        }
+      }
+    }
+  }
+  &--1{
+    opacity: 1;
+    transform:translateY(0rem);
+    animation: menu-appearance 1000ms 100ms both;
+  }
+  &--2{
+    opacity: 1;
+    transform:translateY(0rem);
+    animation: menu-appearance 1000ms 400ms both;
+  }
+  &--3{
+    opacity: 1;
+    transform:translateY(0rem);
+    animation: menu-appearance 1000ms 700ms both;
+  }
+  &--4{
+    opacity: 1;
+    transform:translateY(0rem);
+    animation: menu-appearance 1000ms 1000ms both;
+  }
+}
+
+@keyframes menu-appearance {
+  0% {
+    opacity: 0;
+    transform: translateY(1.2rem);
+  }
+  33%{
+    opacity: 0;
+    /*transform: translateY(0.8rem);*/
+  }
+  66%{
+    opacity: 0.5;
+    /*transform: translateY(0.4rem);*/
+  }
+  100% {
+    opacity:1;
+    transform: translateY(0rem);
   }
 }
 
@@ -128,7 +190,7 @@
     font-size: 1rem;
     margin: 1rem 0 1rem 0;
     &:hover {
-      box-shadow: 0.1em 0.1em 0.2em $grey-1;
+      box-shadow: 0.1em 0.1em 0.2em black;
     }
   }
 }
@@ -136,7 +198,6 @@
 @media screen and (min-width: 768px) {
   .menu_title {
     @include flex_dlc(row, center, space-between);
-
     &_h1 {
       margin: 1rem 2rem 1rem 2rem;
       & h1 {
@@ -157,18 +218,5 @@
 
   .choice {
     width: 95%;
-    &_description {
-      & h3,
-      p {
-        margin: 1rem 1rem 1rem 1.5rem;
-      }
-      & h3 {
-        font-size: 0.9rem;
-      }
-
-      & p {
-        font-size: 0.7rem;
-      }
-    }
   }
 }

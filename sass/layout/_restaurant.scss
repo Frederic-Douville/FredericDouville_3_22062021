@@ -92,11 +92,12 @@
     flex-wrap: wrap;
     & a {
       width: 50%;
+      @include flex_dlc(row,center,center);
     }
   }
   .card_container {
     width: 80%;
-    max-width: none;
+    max-width: 30rem;
     height: auto;
   }
 }
