@@ -2,6 +2,7 @@
   @include flex_dlc(column, center, space-around);
   width: 100%;
   &_img {
+    width: 100%;
     & img {
       object-fit: cover;
       width: 100%;

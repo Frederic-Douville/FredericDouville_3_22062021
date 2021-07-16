@@ -26,6 +26,7 @@
   z-index: 1;
   &_img {
     @include flex_dlc(row, flex-start, flex-start);
+    width: 100%;
     & img {
       object-fit: cover;
       width: 100%;
