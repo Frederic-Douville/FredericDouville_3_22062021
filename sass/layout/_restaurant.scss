@@ -1,5 +1,5 @@
 .restaurant_container {
-  @include flex_dlc(column, flex-start, none);
+  @include flex_dlc(column, flex-start, space-around);
   background-color: $grey-3;
   &_title h1 {
     margin: 3rem 0 1rem 1rem;
@@ -17,7 +17,7 @@
 }
 
 .card_container {
-  @include flex_dlc(column, none, none);
+  @include flex_dlc(column, center, center);
   @include border_button;
   background-color: white;
   margin: 1rem 10% 1rem 10%;
@@ -35,9 +35,9 @@
   }
   &_description {
     @include flex_dlc(row, center, space-between);
+    width: 90%;
     margin: 0.5rem 1rem 1rem 1rem;
     &_title {
-      margin: none;
       & h2 {
         margin: 0 0 0.5rem 0;
         font-size: 1.2rem;
@@ -92,7 +92,7 @@
     flex-wrap: wrap;
     & a {
       width: 50%;
-      @include flex_dlc(row,center,center);
+      @include flex_dlc(row, center, center);
     }
   }
   .card_container {
