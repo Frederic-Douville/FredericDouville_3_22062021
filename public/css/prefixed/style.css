@@ -1,18 +1,18 @@
 @font-face {
   font-family: "Roboto_light";
-  src: url(../../public/font/Roboto-Light.ttf) format("truetype");
+  src: url(../../font/Roboto-Light.ttf) format("truetype");
 }
 @font-face {
   font-family: "Roboto_bold";
-  src: url(../../public/font/Roboto-Bold.ttf) format("truetype");
+  src: url(../../font/Roboto-Bold.ttf) format("truetype");
 }
 @font-face {
   font-family: "Roboto_medium";
-  src: url(../../public/font/Roboto-Medium.ttf) format("truetype");
+  src: url(../../font/Roboto-Medium.ttf) format("truetype");
 }
 @font-face {
   font-family: "Shrikhand";
-  src: url(../../public/font/Shrikhand-Regular.ttf) format("truetype");
+  src: url(../../font/Shrikhand-Regular.ttf) format("truetype");
 }
 p,
 li,
