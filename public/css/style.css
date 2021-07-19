@@ -254,6 +254,8 @@ header img {
 }
 .restaurant_container_card a {
   width: 100%;
+  display: flex;
+  justify-content: center;
 }
 .restaurant_container_card a:hover .card_container {
   box-shadow: 0.1em 0.1em 0.2em #2d2d2d;

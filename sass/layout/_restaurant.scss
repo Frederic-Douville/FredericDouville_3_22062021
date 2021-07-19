@@ -10,6 +10,8 @@
     margin: 0 0 3rem 0;
     & a {
       width:100%;
+      display: flex;
+      justify-content: center;
       &:hover {
         .card_container {
           box-shadow: 0.1em 0.1em 0.2em $grey-1;
