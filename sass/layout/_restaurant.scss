@@ -8,9 +8,12 @@
     @include flex_dlc(column, center, space-around);
     width: 100%;
     margin: 0 0 3rem 0;
-    & a:hover {
-      .card_container {
-        box-shadow: 0.1em 0.1em 0.2em $grey-1;
+    & a {
+      width:100%;
+      &:hover {
+        .card_container {
+          box-shadow: 0.1em 0.1em 0.2em $grey-1;
+        }
       }
     }
   }
