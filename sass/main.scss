@@ -14,16 +14,41 @@
 @import "./layout/restaurant";
 @import "./layout/menu";
 @import "./layout/nav";
-@import "./layout/container";
+@import "./layout/loader";
 @import "./layout/footer";
 
 /*
 @import "./pages/..";
 */
+
+body{
+  @include flex_dlc(column,center,flex-start);
+  z-index:-1;
+}
+
 .bloc_page {
   width: 100%;
   @include flex_dlc(column, center, space-around);
   margin: auto;
+  animation:begin-bloc 3s both;
+}
+
+.bloc_page_2{
+  width: 100%;
+  @include flex_dlc(column, center, space-around);
+  margin: auto;
+}
+
+@keyframes begin-bloc {
+  0%{
+    opacity: 0;
+  }
+  90%{
+    opacity: 0;
+  }
+  100%{
+    opacity:1;
+  }
 }
 
 main {
