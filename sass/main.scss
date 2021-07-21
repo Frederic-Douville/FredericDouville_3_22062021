@@ -63,10 +63,16 @@ a {
   .bloc_page {
     width: 100%;
   }
+  .bloc_page_2{
+    width:100%;
+  }
 }
 
 @media screen and (min-width: 991px) {
   .bloc_page {
     width: 70%;
+  }
+  .bloc_page_2{
+    width:70%;
   }
 }
