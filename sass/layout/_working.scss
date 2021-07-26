@@ -34,9 +34,8 @@
         max-width: 18rem;
         height: 4rem;
         cursor: pointer;
-        &:hover {
-          box-shadow: 0.1em 0.1em 0.2em $grey-1;
-          background-color: $grey-2;
+        &:hover {          
+          background-color: rgba(147,86,220,0.2);          
           .svg-inline--fa {
             fill: $color-1;
           }
